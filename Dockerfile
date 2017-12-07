@@ -5,6 +5,8 @@ RUN apt install -y nano git curl make python g++ nodejs npm --no-install-recomme
 
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
+RUN npm install bower -g
+
 RUN mkdir /var/explorer
 ADD app /var/explorer/app
 ADD .bowerrc bower.json package.json /var/explorer/

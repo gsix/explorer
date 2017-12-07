@@ -27,7 +27,7 @@ angular.module('ethExplorer', ['ngRoute','ui.bootstrap'])
   }])
   .run(function onRun($rootScope) {
     var web3 = new Web3();
-    var ethNodeUrl = [window.location.protocol, '//', window.location.hostname, ':8545'].join('');
+    var ethNodeUrl = ['http:', '//', window.location.hostname, ':8545'].join('');
     web3.setProvider(new web3.providers.HttpProvider(ethNodeUrl));
       $rootScope.web3 = web3;
       function sleepFor( sleepDuration ){

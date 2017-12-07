@@ -11,6 +11,7 @@ x-explorer:
       - 8019:8000
     volumes:
       - ./node_modules:/var/explorer/node_modules
+      - ./app/bower_components:/var/explorer/app/bower_components
     restart: always
 
 services:
